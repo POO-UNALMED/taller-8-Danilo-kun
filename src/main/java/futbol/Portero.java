@@ -1,6 +1,6 @@
 package futbol;
 
-public class Portero extends Futbolista implements Comparable<Futbolista> {
+public class Portero extends Futbolista implements Comparable<Object> {
 	public short golesRecibidos;
 	public byte dorsal;
 	public Portero(String n, int e, short g, byte d) {
@@ -15,8 +15,8 @@ public class Portero extends Futbolista implements Comparable<Futbolista> {
 	public boolean jugarConLasManos() {
 		return true;
 	}
-	public int compareTo(Futbolista o) {
-			return(this.getGolesRecibidos()- ((Portero) o).getGolesRecibidos());
+	public int compareTo(Portero o) {
+			return(this.getGolesRecibidos()- o.getGolesRecibidos());
 	}
 	public void setGolesRecibidos(short i) {
 		this.golesRecibidos=i;
