@@ -13,7 +13,7 @@ public abstract class Futbolista implements Comparable<Futbolista> {
 		this("Maradona",30,"delantero");
 	}
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Futbolista o) {
 		return 1;
 	}
 	public String toString() {
