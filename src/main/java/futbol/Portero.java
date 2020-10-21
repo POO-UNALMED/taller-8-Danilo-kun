@@ -4,7 +4,7 @@ public class Portero extends Futbolista implements Comparable<Object> {
 	public short golesRecibidos;
 	public byte dorsal;
 	public Portero(String n, int e, short g, byte d) {
-		super(n,e,"portero");
+		super(n,e,"Portero");
 		this.golesRecibidos=g;
 		this.dorsal=d;
 	}
@@ -16,7 +16,7 @@ public class Portero extends Futbolista implements Comparable<Object> {
 		return true;
 	}
 	public int compareTo(Portero o) {
-			return(this.getGolesRecibidos()- o.getGolesRecibidos());
+			return(o.getGolesRecibidos()-this.getGolesRecibidos());
 	}
 	public void setGolesRecibidos(short i) {
 		this.golesRecibidos=i;
@@ -30,4 +30,5 @@ public class Portero extends Futbolista implements Comparable<Object> {
 	public byte getDorsal() {
 		return this.dorsal;
 	}
+	
 }

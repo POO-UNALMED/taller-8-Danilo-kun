@@ -43,13 +43,5 @@ public class Futbolista implements Comparable<Object> {
 	public String getPosicion() {
 		return this.posicion;
 	}
-	public static void main(String[] args) {
-		Futbolista a= new Futbolista();
-		Futbolista b=new Futbolista();
-		boolean ok = false;
-		if (a.equals(b)&&b.equals(a)) {
-			ok = true;
-		}
-		System.out.print(ok);
-	}
+	
 }
