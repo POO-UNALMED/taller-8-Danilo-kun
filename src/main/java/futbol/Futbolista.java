@@ -20,12 +20,7 @@ public class Futbolista implements Comparable<Object> {
 		return "El futbolista "+this.nombre+" tiene "+this.edad+", y juega de "+this.posicion;
 	}
 	public boolean equals(Futbolista i) {
-		if(this.nombre.equals(i.nombre)&&this.edad==i.edad&&this.posicion.equals(i.posicion)) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return super.equals(i);
 	}
 	public boolean jugarConLasManos() {
 		return false;
@@ -47,5 +42,14 @@ public class Futbolista implements Comparable<Object> {
 	}
 	public String getPosicion() {
 		return this.posicion;
+	}
+	public static void main(String[] args) {
+		Futbolista a= new Futbolista();
+		Futbolista b=new Futbolista();
+		boolean ok = false;
+		if (a.equals(b)&&b.equals(a)) {
+			ok = true;
+		}
+		System.out.print(ok);
 	}
 }
