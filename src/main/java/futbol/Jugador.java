@@ -11,7 +11,7 @@ public class Jugador extends Futbolista implements Comparable<Object> {
 	public Jugador() {
 		super();
 		this.golesMarcados=289;
-		this.dorsal=9;
+		this.dorsal=7;
 	}
 	public String toString() {
 		return "El futbolista "+this.getNombre()+" tiene "+this.getEdad()+", y juega de "+this.getPosicion()+" con el dorsal "+this.dorsal+". Ha marcado "+this.golesMarcados;
@@ -23,5 +23,14 @@ public class Jugador extends Futbolista implements Comparable<Object> {
 	public boolean jugarConLasManos() {
 		return false;
 	}
-	
+	public static void main(String[] args) {
+		Jugador f = new Jugador();
+		boolean ok = false;
+		if (f.getEdad() == 30 && f.getNombre().equals("Maradona") 
+				&& f.getPosicion().equals("delantero") && f.golesMarcados == 289
+				&& f.dorsal == 7) {
+			ok = true;
+		}
+		System.out.print(ok);
+	}
 }
